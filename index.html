@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impasta Lab</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+  <div class="container">
+    <!-- Brand with logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+  <img src="./img/172001726_padded_logo.png" alt="Logo" width="180" height="180" class="d-inline-block align-text-top" />
+</a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="./aboume.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <header class="hero d-flex align-items-center text-white">
+    <div class="container text-center">
+      <h2 class="maintext display-4 fw-bold">Impasta Lab isn’t just a pasta shop <br>it’s a tribute to my roots, my family, and the flavours that shaped my life.</h2>
+      <a href="./services.html" class="btn btn-lg discover-more-button">Discover More</a>
+    </div>
+  </header>
+
+ <!-- Footer -->
+  <footer class="footer py-4 text-light">
+    <div class="footer-items container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <small>© 2025 Impasta Lab</small>
+      <div class="social">
+        <a href="https://www.instagram.com/impastalabristol/" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Impasta-LAB/61556939052139/" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:impastalab@icloud.com" class="text-light"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer> 
+
+  <!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner position-fixed bottom-0 start-0 end-0 p-3 px-md-4 d-flex flex-column flex-md-row justify-content-between align-items-center" style="display: none;">
+  <div class="cookie-text text-center text-md-start mb-3 mb-md-0 text-dark">
+    We use cookies to enhance your browsing experience. By continuing, you agree to our use of cookies. Read our <a href="./privacy.html" class="fw-semibold text-decoration-underline text-dark">Privacy Policy</a>.
+  </div>
+  <button id="accept-cookies" class="btn btn-sm btn-accept text-dark px-4 fw-semibold">Accept</button>
+</div>
+
+
+  <!-- Bootstrap JS bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  
+  <!-- JS cookies handler -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.classList.add("show");
+  }
+
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.classList.remove("show");
+    banner.classList.add("hide");
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

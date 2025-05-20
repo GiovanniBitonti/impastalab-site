@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impasta Lab</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+  <div class="container">
+    <!-- Brand with logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+  <!-- <img src="./img/172001726_padded_logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top" /> -->
+  <span class="fw-bold">Impasta Lab</span>
+</a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="./aboume.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-form-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <!-- Form Column -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">We'd love to hear from you!</h2>
+        <p class="mb-4">
+        Have a question about our dishes, experiences or services? Don’t hesitate to reach out!
+        You can email me at <a href="mailto:impastalab@icloud.com">impastalab@icloud.com</a>,
+        call me at <a href="tel:+447456274275">07456 274275</a>,
+        or simply fill out the form below.
+        </p>
+
+        <!-- At the moment the form submission is handled for free by formsubmit which has a limit of 50 emails per month-->
+        <!--we can cahnge this to Web3Forms at some point-->
+        <form action="https://formsubmit.co/impastalab@icloud.com" method="POST">
+  <input type="hidden" name="_subject" value="New Enquiry from Website">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <div class="row mb-3">
+    <div class="col">
+      <label for="firstName" class="form-label">First Name *</label>
+      <input type="text" class="form-control form-control-custom" name="First Name" id="firstName" required />
+    </div>
+    <div class="col">
+      <label for="lastName" class="form-label">Last Name *</label>
+      <input type="text" class="form-control form-control-custom" name="Last Name" id="lastName" required />
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email *</label>
+    <input type="email" class="form-control form-control-custom" name="Email" id="email" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone *</label>
+    <input type="tel" class="form-control form-control-custom" name="Phone" id="phone" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="subject" class="form-label">I am enquiring about *</label>
+    <select class="form-select form-control-custom" name="Subject" id="subject" required>
+      <option value="">Select an option</option>
+      <option value="buffet">Daily Lunch Service</option>
+      <option value="pasta-class">Event & Office Catering</option>
+      <option value="event">Pasta Workshops</option>
+      <option value="general">Picnic & Party Boxes (Aperibox)</option>
+      <option value="general">Pre-Orders & Takeaway</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="message" class="form-label">Message *</label>
+    <textarea class="form-control form-control-custom" name="Message" id="message" rows="4" required></textarea>
+  </div>
+
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="privacyPolicy" required />
+    <label class="form-check-label" for="privacyPolicy">
+      I confirm I have read the <a href="./privacy.html">Privacy Policy</a> *
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-custom">Send</button>
+</form>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="rounded-4 overflow-hidden shadow">
+          <img src="./img/Screenshot 2025-05-13 at 21.24.50.png" alt="Impasta Lab Chef" class="img-fluid object-fit-cover" style="height: 100%; width: 100%; object-position: center;" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Address & Map -->
+<div class="col-12 mt-5">
+  <div class="text-center">
+    <h5 class="fw-bold mb-2">Visit Us</h5>
+    <p class="mb-3">Unit 9, Boxworks at Brabazon, Hayes Way, BS34 5EB</p>
+  </div>
+
+  <div class="rounded-4 overflow-hidden shadow mx-auto" style="max-width: 100%; height: 400px;">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2491.1174178196996!2d-2.5769283!3d51.5235899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7cbc7965f5%3A0xfbdaedb90a942f9f!2sBoxworks%20at%20Brabazon!5e0!3m2!1sen!2suk!4v1715681504786!5m2!1sen!2suk" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+</div>
+
+ <!-- Footer -->
+  <footer class="footer py-4 text-light">
+    <div class="footer-items container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <small>© 2025 Impasta Lab</small>
+      <div class="social">
+        <a href="https://www.instagram.com/impastalabristol/" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Impasta-LAB/61556939052139/" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:impastalab@icloud.com" class="text-light"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
