@@ -77,13 +77,24 @@
         or simply fill out the form below.
         </p>
 
-        <!-- At the moment the form submission is handled for free by formsubmit which has a limit of 50 emails per month-->
-        <!--we can cahnge this to Web3Forms at some point-->
-        <form action="https://formsubmit.co/impastalab@icloud.com" method="POST">
-  <input type="hidden" name="_subject" value="New Enquiry from Website">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-  
+       
+       <form action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="011c18f2-d28a-417d-88a4-1a2886e1e7b0">
+
+  <!-- Email subject -->
+  <input type="hidden" name="subject" value="New Enquiry from Website">
+
+  <!-- Where submissions should be delivered -->
+  <input type="hidden" name="email" value="impastalab@icloud.com">
+
+  <!-- Sender name shown in the email -->
+  <input type="hidden" name="from_name" value="Impasta Lab Website">
+
+  <!-- Web3Forms Honeypot -->
+  <input type="checkbox" name="botcheck" class="d-none" style="display:none !important">
+
   <div class="row mb-3">
     <div class="col">
       <label for="firstName" class="form-label">First Name *</label>
